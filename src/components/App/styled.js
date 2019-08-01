@@ -11,15 +11,20 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-  height: 50%;
+  width: 400px;
+  height: 400px;
   border: 10px solid black;
+  border-radius: 50%;
   .selected {
     opacity: 0.5;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 `;
 export const Red = styled.div`
-  flex: 1 1 50%;
+  border-top-left-radius: 100%;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  flex: 1 1 calc(50% - 10px);
   background-color: red;
   z-index: 5;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -30,8 +35,11 @@ export const Red = styled.div`
   }
 `;
 export const Blue = styled.div`
+  border-top-right-radius: 100%;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
   z-index: 5;
-  flex: 1 1 50%;
+  flex: 1 1 calc(50% - 10px);
   background-color: blue;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -41,7 +49,10 @@ export const Blue = styled.div`
   }
 `;
 export const Yellow = styled.div`
-  flex: 1 1 50%;
+  border-bottom-left-radius: 100%;
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+  flex: 1 1 calc(50% - 10px);
   background-color: yellow;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -51,7 +62,10 @@ export const Yellow = styled.div`
   }
 `;
 export const Green = styled.div`
-  flex: 1 1 50%;
+  border-bottom-right-radius: 100%;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  flex: 1 1 calc(50% - 10px);
   background-color: green;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
