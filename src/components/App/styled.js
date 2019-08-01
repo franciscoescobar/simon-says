@@ -14,6 +14,9 @@ export const Wrapper = styled.div`
   width: 50%;
   height: 50%;
   border: 10px solid black;
+  .selected {
+    opacity: 0.5;
+  }
 `;
 export const Red = styled.div`
   flex: 1 1 50%;
@@ -72,11 +75,13 @@ export const SoundIcon = styled.span`
   color: white;
 `;
 export const PlayerMoves = styled.ul`
+  list-style: none;
   position: absolute;
   right: 24px;
   font-size: 36px;
 `;
 export const SimonMoves = styled.ul`
+  list-style: none;
   position: absolute;
   left: 24px;
   font-size: 36px;
