@@ -19,6 +19,11 @@ export const Wrapper = styled.div`
     opacity: 0.5;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
+  @media only screen and (max-width: 600px) {
+    width: 300px;  
+    height: 300px;  
+  }
+}
 `;
 export const Red = styled.div`
   border-top-left-radius: 100%;
@@ -99,4 +104,15 @@ export const SimonMoves = styled.ul`
   position: absolute;
   left: 24px;
   font-size: 36px;
+`;
+export const Counter = styled.h2`
+  font-size: 64px;
+  position: absolute;
+  top: -24px;
+  left: 48px;
+  color: white;
+  @media only screen and (max-width: 600px) {
+    font-size: 48px;
+    left: 24px;
+  }
 `;

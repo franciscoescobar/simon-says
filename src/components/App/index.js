@@ -9,7 +9,8 @@ import {
   Green,
   StartButton,
   PlayerMoves,
-  SimonMoves
+  SimonMoves,
+  Counter
 } from "./styled";
 import redAudioSource from "../../assets/audios/sound1.mp3";
 import blueAudioSource from "../../assets/audios/sound2.mp3";
@@ -173,6 +174,7 @@ function App() {
       <StartButton onClick={() => setCheats(!cheats)}>
         {!cheats ? "Enable Cheats" : "Disable Cheats"}
       </StartButton>
+      <Counter>{simon.length}</Counter>
     </Container>
   );
 }

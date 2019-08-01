@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/simon-says/static/css/main.db60398c.chunk.css",
-    "main.js": "/simon-says/static/js/main.193fc02d.chunk.js",
-    "main.js.map": "/simon-says/static/js/main.193fc02d.chunk.js.map",
+    "main.js": "/simon-says/static/js/main.4f2c765f.chunk.js",
+    "main.js.map": "/simon-says/static/js/main.4f2c765f.chunk.js.map",
     "runtime~main.js": "/simon-says/static/js/runtime~main.4578f539.js",
     "runtime~main.js.map": "/simon-says/static/js/runtime~main.4578f539.js.map",
     "static/js/2.fb38913b.chunk.js": "/simon-says/static/js/2.fb38913b.chunk.js",
     "static/js/2.fb38913b.chunk.js.map": "/simon-says/static/js/2.fb38913b.chunk.js.map",
     "index.html": "/simon-says/index.html",
-    "precache-manifest.79e8515d8ff72eb01ddada581c5cb680.js": "/simon-says/precache-manifest.79e8515d8ff72eb01ddada581c5cb680.js",
+    "precache-manifest.5f8622d4ab4b13589db2561cbbb96aa1.js": "/simon-says/precache-manifest.5f8622d4ab4b13589db2561cbbb96aa1.js",
     "service-worker.js": "/simon-says/service-worker.js",
     "static/css/main.db60398c.chunk.css.map": "/simon-says/static/css/main.db60398c.chunk.css.map",
     "static/media/sound1.mp3": "/simon-says/static/media/sound1.88bfc182.mp3",
