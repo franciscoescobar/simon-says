@@ -71,3 +71,13 @@ export const SoundIcon = styled.span`
   font-size: 36px;
   color: white;
 `;
+export const PlayerMoves = styled.ul`
+  position: absolute;
+  right: 24px;
+  font-size: 36px;
+`;
+export const SimonMoves = styled.ul`
+  position: absolute;
+  left: 24px;
+  font-size: 36px;
+`;

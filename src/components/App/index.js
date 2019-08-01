@@ -7,7 +7,9 @@ import {
   Blue,
   Yellow,
   Green,
-  StartButton
+  StartButton,
+  PlayerMoves,
+  SimonMoves
 } from "./styled";
 import redAudioSource from "../../assets/audios/sound1.mp3";
 import blueAudioSource from "../../assets/audios/sound2.mp3";
@@ -17,37 +19,29 @@ function App() {
   const [muted, setMuted] = useState(false);
   const [simon, setSimon] = useState([]);
   const [player, setPlayer] = useState([]);
+  const [lose, setLose] = useState(false);
+  const [button, setButton] = useState("Start");
   const simonSays = () => {
+    if (button === "Start") {
+      setButton("Next");
+    }
     const randomNumber = Math.floor(Math.random() * 4);
     setSimon(simon.concat(randomNumber));
     setPlayer([]);
-    simon.forEach(value => {
-      setTimeout(() => {
-        console.log(value);
-        switch (value) {
-          case 0:
-            new Audio(redAudioSource).play();
-            break;
-          case 1:
-            new Audio(blueAudioSource).play();
-            break;
-          case 2:
-            new Audio(yellowAudioSource).play();
-            break;
-          case 3:
-            new Audio(greenAudioSource).play();
-            break;
-          default:
-            break;
-        }
-      }, 1500);
-    });
   };
   const onColorClick = (name, number) => {
-    if (!muted) {
-      return new Audio(name).play();
-    }
     setPlayer(player.concat(number));
+    if (!muted) {
+      new Audio(name).play();
+    }
+    player.map((move, index) => {
+      if (move !== simon[index]) {
+        setPlayer([]);
+        setSimon([]);
+        setLose(true);
+        setButton("Start");
+      }
+    });
   };
   return (
     <Container>
@@ -60,7 +54,17 @@ function App() {
         <Yellow onClick={() => onColorClick(yellowAudioSource, 2)} />
         <Green onClick={() => onColorClick(greenAudioSource, 3)} />
       </Wrapper>
-      <StartButton onClick={simonSays}>Start</StartButton>
+      <SimonMoves>
+        {simon.map((move, index) => (
+          <li key={index}>{move}</li>
+        ))}
+      </SimonMoves>
+      <PlayerMoves>
+        {player.map((move, index) => (
+          <li key={index}>{move}</li>
+        ))}
+      </PlayerMoves>
+      <StartButton onClick={simonSays}>{button}</StartButton>
     </Container>
   );
 }
