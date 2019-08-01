@@ -81,6 +81,11 @@ function App() {
     if (!muted) {
       new Audio(name).play();
     }
+  };
+  useEffect(() => {
+    displaySimon();
+  }, [simon]);
+  useEffect(() => {
     player.map((move, index) => {
       if (move !== simon[index]) {
         setPlayer([]);
@@ -89,11 +94,6 @@ function App() {
         setButton("Start");
       }
     });
-  };
-  useEffect(() => {
-    displaySimon();
-  }, [simon]);
-  useEffect(() => {
     if (player.length === simon.length) {
       setLoading(false);
     }
