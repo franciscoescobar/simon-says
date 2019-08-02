@@ -12,11 +12,16 @@ import {
   SimonMoves,
   Counter
 } from "./styled";
-import redAudioSource from "../../assets/audios/sound1.mp3";
-import blueAudioSource from "../../assets/audios/sound2.mp3";
-import yellowAudioSource from "../../assets/audios/sound3.mp3";
-import greenAudioSource from "../../assets/audios/sound4.mp3";
+
 function App() {
+  const redAudioSource =
+    "https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-13.mp3";
+  const blueAudioSource =
+    "https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-14.mp3";
+  const yellowAudioSource =
+    "https://ia600503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-15.mp3";
+  const greenAudioSource =
+    "https://ia800503.us.archive.org/8/items/futuresoundfx-98/futuresoundfx-16.mp3";
   const [muted, setMuted] = useState(false);
   const [simon, setSimon] = useState([]);
   const [player, setPlayer] = useState([]);
@@ -170,7 +175,11 @@ function App() {
           </PlayerMoves>
         </>
       ) : null}
-      {loading ? null : <StartButton onClick={simonSays}>{button}</StartButton>}
+      {loading ? (
+        <StartButton>Simon says...</StartButton>
+      ) : (
+        <StartButton onClick={simonSays}>{button}</StartButton>
+      )}
       <StartButton onClick={() => setCheats(!cheats)}>
         {!cheats ? "Enable Cheats" : "Disable Cheats"}
       </StartButton>
